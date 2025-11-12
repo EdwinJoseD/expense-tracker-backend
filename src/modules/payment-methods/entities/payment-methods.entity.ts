@@ -10,7 +10,7 @@ import {
   Index,
 } from 'typeorm';
 import { User } from '../../users/entities/user.entity';
-// import { Expense } from '../../expenses/entities/expense.entity';
+import { Expense } from '../../expenses/entities';
 
 export enum PaymentMethodType {
   CASH = 'cash',
@@ -69,8 +69,8 @@ export class PaymentMethod {
   @Column()
   userId: string;
 
-  //   @OneToMany(() => Expense, (expense) => expense.paymentMethod)
-  //   expenses: Expense[];
+  @OneToMany(() => Expense, (expense) => expense.paymentMethod)
+  expenses: Expense[];
 
   @CreateDateColumn()
   createdAt: Date;

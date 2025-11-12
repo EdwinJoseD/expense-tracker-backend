@@ -9,8 +9,8 @@ import {
   Index,
 } from 'typeorm';
 import { User } from '../../users/entities/user.entity';
-import { Category } from '../../../categories/entities/category.entity';
-import { PaymentMethod } from '../../payment-methods/entities/payment-method.entity';
+import { Category } from '../../categories/entities';
+import { PaymentMethod } from '../../payment-methods/entities';
 
 export enum ExpenseSource {
   MANUAL = 'manual',

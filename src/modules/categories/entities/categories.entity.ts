@@ -10,7 +10,7 @@ import {
   Index,
 } from 'typeorm';
 import { User } from '../../users/entities/user.entity';
-// import { Expense } from '../../expenses/entities/expense.entity';
+import { Expense } from '../../expenses/entities';
 
 @Entity('categories')
 @Index(['userId', 'name'], { unique: true })
@@ -46,8 +46,8 @@ export class Category {
   @Column({ nullable: true })
   userId: string;
 
-  //   @OneToMany(() => Expense, (expense) => expense.category)
-  //   expenses: Expense[];
+  @OneToMany(() => Expense, (expense) => expense.category)
+  expenses: Expense[];
 
   @CreateDateColumn()
   createdAt: Date;

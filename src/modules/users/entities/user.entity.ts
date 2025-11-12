@@ -7,7 +7,7 @@ import {
   OneToMany,
 } from 'typeorm';
 import { Exclude } from 'class-transformer';
-import { Expense } from '../../expenses/entities/expense.entity';
+import { Expense } from '../../expenses/entities';
 // import { Income } from '../../incomes/entities/income.entity';
 import { PaymentMethod } from '../../payment-methods/entities/payment-methods.entity';
 import { Category } from '../../categories/entities/categories.entity';
